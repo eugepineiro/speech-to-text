@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "speech-to-text"
+version = "0.1.0"
+description = ""
+authors = ["eugepineiro <epineiro@itba.edu.ar>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+openai = "^1.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
