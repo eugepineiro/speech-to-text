@@ -11,6 +11,7 @@ forced_decoder_ids = processor.get_decoder_prompt_ids(language="es", task="trans
 ds = load_dataset("facebook/multilingual_librispeech", "spanish", split="train")
 
 ds = ds.cast_column("audio", Audio(sampling_rate=16_000))
+
 input_speech = next(iter(ds))["audio"]
 input_features = processor(input_speech["array"], sampling_rate=input_speech["sampling_rate"], return_tensors="pt").input_features
 
